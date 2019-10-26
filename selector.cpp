@@ -4,8 +4,6 @@
 using namespace okapi;
 
 static const char *btnmMap[] = {"Front", "Back", "Do Nothing", ""};
-int autonSelection = 3;
-
 
 /*Create a button descriptor string array*/
 
