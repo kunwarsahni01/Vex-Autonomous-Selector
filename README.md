@@ -13,7 +13,7 @@
 6. Create multiple if statements for all possible numbers of autonSelection.
 7. All possible cases are listed below:
 
-* autonSelection == 1 :Blue Fro nt 
+* autonSelection == 1 :Blue Front 
 * autonSelection == 2 : Blue Back
 * autonSelection == 3 : Do Nothing
 * autonSelection == -1 : Red Front
