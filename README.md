@@ -9,7 +9,7 @@
 5. Place **selectorInit();** in void initazlize(){} in your main.cpp file.
 6. Make if statements in your void **void autonomous() {}** like so:
 
-  if(autonSelection == 1){ //run auton for Front Blue }
+  `if(autonSelection == 1){ //run auton for Front Blue }`
 
 7. Create multiple if statements for all possible numbers of autonSelection.
 8. All possible cases are listed below:
