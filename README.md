@@ -5,13 +5,14 @@
 1. Download the zip file release from here: https://github.com/kunwarsahni01/Vex-Autonomous-Selector/releases
 2. Put the selector.h file in your include folder in your PROS Project.
 3. Put the selector.cpp file in your sec folder in your PROS Project.
-4. Place **selectorInit();** in void initazlize(){} in your main.cpp file.
-5. Make if statements in your void **void autonomous() {}** like so:
+4. Put this: **#include "selector.h"** at the top of your main.h file in your PROS Project.
+5. Place **selectorInit();** in void initazlize(){} in your main.cpp file.
+6. Make if statements in your void **void autonomous() {}** like so:
 
   if(autonSelection == 1){ //run auton for Front Blue }
 
-6. Create multiple if statements for all possible numbers of autonSelection.
-7. All possible cases are listed below:
+7. Create multiple if statements for all possible numbers of autonSelection.
+8. All possible cases are listed below:
 
 * autonSelection == 1 :Blue Front 
 * autonSelection == 2 : Blue Back
