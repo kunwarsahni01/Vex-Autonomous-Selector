@@ -22,3 +22,5 @@
 * autonSelection == -2 : Red Back
 * autonSelection == -3 : Do Nothing
 * autonSelection == 0 : Skills
+
+Credit also to Sully|80508X
