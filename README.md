@@ -4,7 +4,7 @@
 ## How to use:
 1. Download the zip file release from here: [Releases](https://github.com/kunwarsahni01/Vex-Autonomous-Selector/releases)
 2. Run this command from terminal: `prosv5 c fetch autoSelect@1.0.0.zip`
-3. Then cd into your pros project directory in your terminal.
+3. Then `cd` into your pros project directory in your terminal.
 4. And Run this command from terminal: `prosv5 c apply autoSelect@1.0.0`
 4. Put this: `#include "selection.h"` at the top of your main.cpp file in your PROS Project.
 5. Place `selectorInit();` in `void initazlize(){}` in your main.cpp file.
