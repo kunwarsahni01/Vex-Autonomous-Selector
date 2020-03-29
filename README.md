@@ -10,17 +10,20 @@
 5. Place `selectorInit();` in `void initazlize(){}` in your main.cpp file.
 6. Make if statements in your void `void autonomous() {}` like so:
 
-  `if(autonSelection == 1){ //run auton for Front Blue }`
+  `if(autonSelection == 1){ //run auton for Front Red }`
 
 7. Create multiple if statements for all possible numbers of autonSelection.
-8. All possible cases are listed below:
+8. All default cases are listed below:
 
-* autonSelection == 1 :Blue Front 
-* autonSelection == 2 : Blue Back
-* autonSelection == 3 : Do Nothing
-* autonSelection == -1 : Red Front
-* autonSelection == -2 : Red Back
-* autonSelection == -3 : Do Nothing
+* autonSelection == 1 : Do Nothing
+* autonSelection == 2 :Red Front
+* autonSelection == 3 : Red Back
+* autonSelection == -1 : Do Nothing
+* autonSelection == -2 : Blue Front
+* autonSelection == -3 : Blue Back
 * autonSelection == 0 : Skills
+
+##How to customize the selector
+All configuration is done from the `selection.h` file.
 
 Credit also to Sully|80508X
