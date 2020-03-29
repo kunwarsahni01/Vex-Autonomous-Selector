@@ -28,7 +28,7 @@ All configuration is done from the `autoSelect/selection.h` file.
 ```
 // selector configuration
 #define HUE 360 // color of theme from 0-360
-#define AUTONS "Do Nothing", "Front", "Back" //names of the autonomos programs
+#define AUTONS "Do Nothing", "Front", "Back" // names of the autonomos programs
 #define DEFAULT 1 // default auton
 ```
 * `HUE` - Controls the color of the theme.
