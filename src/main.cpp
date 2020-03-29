@@ -1,5 +1,5 @@
 #include "main.h"
-void initialize() { selectorInit(); }
+void initialize() { selector::init(); }
 
 void disabled() {}
 

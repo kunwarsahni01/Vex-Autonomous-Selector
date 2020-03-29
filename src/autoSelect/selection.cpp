@@ -1,6 +1,8 @@
 #include "main.h"
 #include "selection.h"
 
+namespace selector{
+
 static const char *btnmMap[] = {AUTONS, ""};
 
 //determine total amount of autons per color
@@ -85,3 +87,5 @@ void selectorInit(){
 	lv_obj_set_pos(skillsBtn, 0, 100);
 	lv_obj_align(skillsBtn, NULL, LV_ALIGN_CENTER, 0, 0);
 }
+
+} // namespace selector
