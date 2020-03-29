@@ -1,16 +1,33 @@
-#ifndef SELECTION_H
-#define SELECTION_H
+#pragma once
+
+#include <string>
+#include "display/lvgl.h"
+
+//selector configuration
+#define HUE 360
+#define DEFAULT 1
+#define AUTONS "Do Nothing", "Front", "Back"
 
 namespace selector{
 
-void init();
-extern int auton;
+class Selector {
 
-// selector configuration
-#define HUE 360 // color of theme from 0-360
-#define AUTONS "Do Nothing", "Front", "Back" //names of the autonomos programs
-#define DEFAULT 1 // default auton (positive = red, negative = blue, 0 = skills)
+private:
+	static lv_res_t redBtnmAction(lv_obj_t *btnm, const char *txt);
+	static lv_res_t blueBtnmAction(lv_obj_t *btnm, const char *txt);
+	static lv_res_t skillsBtnAction(lv_obj_t *btn);
 
-} // namespace selector
+public:
+	static int auton;
+	static int autonCount;
+	static int hue;
+	static const char *btnmMap[];
+	void init();
 
-#endif
+};
+
+const char *btnmMap[] = {AUTONS, ""};
+
+void init(int hue = HUE, int default_auton = DEFAULT, const char **autons = btnmMap);
+
+}
