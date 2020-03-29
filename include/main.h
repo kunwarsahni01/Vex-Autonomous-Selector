@@ -35,7 +35,7 @@
 #define PROS_USE_LITERALS
 
 #include "api.h"
-#include "selection.h"
+#include "autoSelect/selection.h"
 
 /**
  * You should add more #includes here

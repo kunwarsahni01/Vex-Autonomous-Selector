@@ -4,7 +4,7 @@
 namespace selector{
 
 void init();
-extern int autonSelection;
+extern int auton;
 
 // selector configuration
 #define HUE 360 // color of theme from 0-360

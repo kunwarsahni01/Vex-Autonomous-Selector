@@ -5,23 +5,23 @@
 1. Download the zip file release from here: [Releases](https://github.com/kunwarsahni01/Vex-Autonomous-Selector/releases)
 2. Run this command from terminal: `prosv5 c fetch autoSelect@2.0.0.zip`
 3. Then `cd` into your pros project directory in your terminal.
-4. And Run this command from terminal: `prosv5 c apply autoSelect@2.0.0`
+4. And Run this command from terminal: `prosv5 c apply autoSelect`
 4. Put this: `#include "autoSelect/selection.h"` at the top of your main.cpp file in your PROS Project.
-5. Place `selectorInit();` in `void initazlize(){}` in your main.cpp file.
+5. Place `selector::init();` in `void initazlize(){}` in your main.cpp file.
 6. Make if statements in your void `void autonomous() {}` like so:
 
-  `if(autonSelection == 1){ //run auton for Front Red }`
+  `if(selector::auton == 1){ //run auton for Front Red }`
 
-7. Create multiple if statements for all possible numbers of autonSelection.
+7. Create multiple if statements for all possible numbers of selector::auton.
 8. All default cases are listed below:
 
-* autonSelection == 1 : Do Nothing
-* autonSelection == 2 :Red Front
-* autonSelection == 3 : Red Back
-* autonSelection == -1 : Do Nothing
-* autonSelection == -2 : Blue Front
-* autonSelection == -3 : Blue Back
-* autonSelection == 0 : Skills
+* selector::auton == 1 : Do Nothing
+* selector::auton == 2 :Red Front
+* selector::auton == 3 : Red Back
+* selector::auton == -1 : Do Nothing
+* selector::auton == -2 : Blue Front
+* selector::auton == -3 : Blue Back
+* selector::auton == 0 : Skills
 
 ## How to customize the selector
 All configuration is done from the `autoSelect/selection.h` file.

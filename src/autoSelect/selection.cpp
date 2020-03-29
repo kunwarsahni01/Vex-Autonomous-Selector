@@ -8,14 +8,14 @@ static const char *btnmMap[] = {AUTONS, ""};
 //determine total amount of autons per color
 int autonCount = sizeof(btnmMap) / sizeof(btnmMap[0]) - 1;
 
-int autonSelection = DEFAULT;
+int auton = DEFAULT;
 
 lv_res_t redBtnmAction(lv_obj_t *btnm, const char *txt){
 	printf("red button: %s released\n", txt);
 
 	for(int i = 0; i < autonCount; i++){
 		if(strcmp(txt, btnmMap[i]) == 0){
-			autonSelection = i+1;
+			auton = i+1;
 		}
 	}
 
@@ -28,7 +28,7 @@ lv_res_t blueBtnmAction(lv_obj_t *btnm, const char *txt)
 
 	for(int i = 0; i < autonCount; i++){
 		if(strcmp(txt, btnmMap[i]) == 0){
-			autonSelection = -(i+1);
+			auton = -(i+1);
 		}
 	}
 
@@ -38,11 +38,11 @@ lv_res_t blueBtnmAction(lv_obj_t *btnm, const char *txt)
 lv_res_t skillsBtnAction(lv_obj_t *btn)
 {
   printf("skills pressed");
-	autonSelection = 0;
+	auton = 0;
 	return LV_RES_OK;
 }
 
-void selectorInit(){
+void init(){
 	// lvgl theme
 	lv_theme_t *th = lv_theme_alien_init(HUE, NULL); //Set a HUE value and keep font default RED
 	lv_theme_set_current(th);
