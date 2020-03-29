@@ -32,7 +32,7 @@ All configuration is done from the `autoSelect/selection.h` file.
 #define DEFAULT 1 // default auton
 ```
 * `HUE` - Controls the color of the theme.
-* `AUTONS` - A list of every autonomous option. This list can be made longer or shorter Depending on the number of autons you have.
+* `AUTONS` - A list of every autonomous option. This list can be made any length, but may format weirdly.
 * `DEFAULT` - The auton will be selected on startup. This is required for starting a programming skills run from the controller.
 
 Credit also to Sully|80508X
