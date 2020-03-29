@@ -25,5 +25,8 @@
 
 ##How to customize the selector
 All configuration is done from the `selection.h` file.
+* HUE - controls the theme color
+* AUTONS - every option that will appear as a button
+* DEFAULT - the auton will be selected by default, this is required for starting a programming skills run from the controller.
 
 Credit also to Sully|80508X
