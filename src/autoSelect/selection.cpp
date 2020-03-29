@@ -64,7 +64,7 @@ void init(){
 	}else if(auton == 0){
 		lv_tabview_set_tab_act(tabview, 2, LV_ANIM_NONE);
 	}else{
-		auton++;
+		auton--;
 	}
 
 	// add content to the tabs
