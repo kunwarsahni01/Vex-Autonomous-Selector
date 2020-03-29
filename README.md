@@ -2,7 +2,7 @@
 ![Screenshot_of_Selector](https://user-images.githubusercontent.com/22580992/67626102-d9e1d080-f814-11e9-84cd-63a44e6a35af.png)
 
 ## How to use:
-1. Download the zip file release from here: [Releases](https://github.com/kunwarsahni01/Vex-Autonomous-Selector/releases)
+1. Download the zip file release from here: [Releases](https://github.com/Marsgate/Vex-Autonomous-Selector/raw/dev/autoSelect%402.0.0.zip)
 2. Run this command from terminal: `prosv5 c fetch autoSelect@2.0.0.zip`
 3. Then `cd` into your pros project directory in your terminal.
 4. And Run this command from terminal: `prosv5 c apply autoSelect`
