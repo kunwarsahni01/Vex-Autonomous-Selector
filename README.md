@@ -2,8 +2,8 @@
 ![Screenshot_of_Selector](https://user-images.githubusercontent.com/22580992/67626102-d9e1d080-f814-11e9-84cd-63a44e6a35af.png)
 
 ## How to use:
-1. Download the zip file release from here: [Releases](https://github.com/Marsgate/Vex-Autonomous-Selector/raw/dev/autoSelect%402.0.0.zip)
-2. Run this command from terminal: `prosv5 c fetch autoSelect@2.0.0.zip`
+1. Download the zip file release from here: [Releases]https://github.com/kunwarsahni01/Vex-Autonomous-Selector/releases)
+2. Run this command from terminal: `prosv5 c fetch autoSelect@2.1.1.zip`
 3. Then `cd` into your pros project directory in your terminal.
 4. And Run this command from terminal: `prosv5 c apply autoSelect`
 4. Put this: `#include "autoSelect/selection.h"` at the top of your main.cpp file in your PROS Project.
@@ -28,7 +28,7 @@ All configuration is done from the `autoSelect/selection.h` file.
 ```
 // selector configuration
 #define HUE 360 // color of theme from 0-360
-#define AUTONS "Do Nothing", "Front", "Back" // names of the autonomos programs
+#define AUTONS "Do Nothing", "Front", "Back" // names of the autonomous programs
 #define DEFAULT 1 // default auton
 ```
 * `HUE` - Controls the color of the theme.
