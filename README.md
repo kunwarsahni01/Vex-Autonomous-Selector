@@ -4,7 +4,7 @@
 This is the Developer branch and as a result an entire PROS Project is included for development
 
 ## How to use:
-1. Download the zip file release from here: [Releases]https://github.com/kunwarsahni01/Vex-Autonomous-Selector/releases)
+1. Download the zip file release from here: [Releases](https://github.com/kunwarsahni01/Vex-Autonomous-Selector/releases)
 2. Run this command from terminal: `prosv5 c fetch autoSelect@2.1.1.zip`
 3. Then `cd` into your pros project directory in your terminal.
 4. And Run this command from terminal: `prosv5 c apply autoSelect`
