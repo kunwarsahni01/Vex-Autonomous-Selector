@@ -15,15 +15,15 @@ void init(int hue, int default_auton, const char **autons){
 	Selector::hue = hue;
 	int i = 0;
 	do{
-		printf("%s\n", autons[i]);
+		//printf("%s\n", autons[i]);
 		memcpy(&Selector::btnmMap[i], &autons[i], sizeof(&autons));
 		i++;
 	}while(strcmp(autons[i], "") != 0);
 
 	Selector::autonCount = i;
 	Selector::auton = default_auton;
-	printf("Default auton %d\n", default_auton);
-	printf("Auton Count %d\n", Selector::autonCount);
+	//printf("Default auton %d\n", default_auton);
+	//printf("Auton Count %d\n", Selector::autonCount);
 	selector.init();
 }
 
@@ -32,7 +32,7 @@ int get(){
 }
 
 lv_res_t Selector::redBtnmAction(lv_obj_t *btnm, const char *txt){
-	printf("red button: %s released\n", txt);
+	//printf("red button: %s released\n", txt);
 
 	for(int i = 0; i < autonCount; i++){
 		if(strcmp(txt, btnmMap[i]) == 0){
@@ -45,7 +45,7 @@ lv_res_t Selector::redBtnmAction(lv_obj_t *btnm, const char *txt){
 
 lv_res_t Selector::blueBtnmAction(lv_obj_t *btnm, const char *txt)
 {
-	printf("blue button: %s released\n", txt);
+	//printf("blue button: %s released\n", txt);
 
 	for(int i = 0; i < autonCount; i++){
 		if(strcmp(txt, btnmMap[i]) == 0){
@@ -58,7 +58,7 @@ lv_res_t Selector::blueBtnmAction(lv_obj_t *btnm, const char *txt)
 
 lv_res_t Selector::skillsBtnAction(lv_obj_t *btn)
 {
-  printf("skills pressed");
+  //printf("skills pressed");
 	auton = 0;
 	return LV_RES_OK;
 }
