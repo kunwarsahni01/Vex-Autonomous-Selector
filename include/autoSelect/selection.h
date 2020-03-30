@@ -30,4 +30,6 @@ const char *btnmMap[] = {AUTONS, ""};
 
 void init(int hue = HUE, int default_auton = DEFAULT, const char **autons = btnmMap);
 
+int get();
+
 }
