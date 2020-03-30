@@ -17,12 +17,12 @@ This is the Developer branch and as a result an entire PROS Project is included 
 7. Create multiple if statements for all possible numbers of selector::auton.
 8. All default cases are listed below:
 
-* selector::get() == 1 : Do Nothing
-* selector::get() == 2 :Red Front
-* selector::get() == 3 : Red Back
-* selector::get() == -1 : Do Nothing
-* selector::get() == -2 : Blue Front
-* selector::get() == -3 : Blue Back
+* selector::get() == 1 : Red Front
+* selector::get() == 2 : Red Back
+* selector::get() == 3 : Do Nothing
+* selector::get() == -1 : Blue Front
+* selector::get() == -2 : Blue Back
+* selector::get() == -3 : Do Nothing
 * selector::get() == 0 : Skills
 
 ## How to customize the selector
