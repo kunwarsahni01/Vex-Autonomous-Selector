@@ -1,6 +1,8 @@
 # Vex Autonomous Selector for PROS
 ![Screenshot_of_Selector](https://user-images.githubusercontent.com/22580992/67626102-d9e1d080-f814-11e9-84cd-63a44e6a35af.png)
 
+##This is the Developer branch and as a result an entire PROS Project is included for development
+
 ## How to use:
 1. Download the zip file release from here: [Releases]https://github.com/kunwarsahni01/Vex-Autonomous-Selector/releases)
 2. Run this command from terminal: `prosv5 c fetch autoSelect@2.1.1.zip`
