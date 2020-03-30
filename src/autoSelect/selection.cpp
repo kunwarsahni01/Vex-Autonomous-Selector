@@ -8,6 +8,10 @@ int autonCount;
 int hue;
 const char *btnmMap[] = {"","","","","","","","","","",""}; // up to 10 autons
 
+lv_obj_t *tabview;
+lv_obj_t *redBtnm;
+lv_obj_t *blueBtnm;
+
 lv_res_t redBtnmAction(lv_obj_t *btnm, const char *txt){
 	//printf("red button: %s released\n", txt);
 
@@ -33,11 +37,36 @@ lv_res_t blueBtnmAction(lv_obj_t *btnm, const char *txt)
 	return LV_RES_OK; // return OK because the button matrix is not deleted
 }
 
-lv_res_t skillsBtnAction(lv_obj_t *btn)
-{
+lv_res_t skillsBtnAction(lv_obj_t *btn){
   //printf("skills pressed");
 	auton = 0;
 	return LV_RES_OK;
+}
+
+int tabWatcher() {
+	int activeTab;
+	while(1){
+		int currentTab = lv_tabview_get_tab_act(tabview);
+
+		if(currentTab != activeTab){
+			//printf("Current Tab: %d\n", currentTab);
+			if(currentTab == 0){
+				if(auton == 0) auton = -1;
+				auton = -abs(auton);
+				lv_btnm_set_toggle(redBtnm, true, abs(auton)-1);
+			}else if(currentTab == 1){
+				if(auton == 0) auton = 1;
+				auton = abs(auton);
+				lv_btnm_set_toggle(blueBtnm, true, abs(auton)-1);
+			}else{
+				auton = 0;
+			}
+		}
+
+		activeTab = currentTab;
+
+		pros::delay(20);
+	}
 }
 
 void init(int hue, int default_auton, const char **autons){
@@ -57,7 +86,6 @@ void init(int hue, int default_auton, const char **autons){
 	lv_theme_set_current(th);
 
 	// create a tab view object
-	lv_obj_t *tabview;
 	tabview = lv_tabview_create(lv_scr_act(), NULL);
 
 	// add 3 tabs (the tabs are page (lv_page) and can be scrolled
@@ -74,7 +102,7 @@ void init(int hue, int default_auton, const char **autons){
 
 	// add content to the tabs
 	// button matrix
-	lv_obj_t *redBtnm = lv_btnm_create(redTab, NULL);
+	redBtnm = lv_btnm_create(redTab, NULL);
 	lv_btnm_set_map(redBtnm, btnmMap);
 	lv_btnm_set_action(redBtnm, redBtnmAction);
 	lv_btnm_set_toggle(redBtnm, true, abs(auton)-1);//3
@@ -83,7 +111,7 @@ void init(int hue, int default_auton, const char **autons){
 	lv_obj_align(redBtnm, NULL, LV_ALIGN_CENTER, 0, 0);
 
 	// blue tab
-	lv_obj_t *blueBtnm = lv_btnm_create(blueTab, NULL);
+	blueBtnm = lv_btnm_create(blueTab, NULL);
 	lv_btnm_set_map(blueBtnm, btnmMap);
 	lv_btnm_set_action(blueBtnm, *blueBtnmAction);
 	lv_btnm_set_toggle(blueBtnm, true, abs(auton)-1);
@@ -100,6 +128,9 @@ void init(int hue, int default_auton, const char **autons){
 	lv_obj_set_size(skillsBtn, 450, 50);
 	lv_obj_set_pos(skillsBtn, 0, 100);
 	lv_obj_align(skillsBtn, NULL, LV_ALIGN_CENTER, 0, 0);
+
+	// start tab watcher
+	pros::Task drive_task(tabWatcher);
 
 }
 
