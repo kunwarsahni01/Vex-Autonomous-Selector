@@ -12,18 +12,18 @@ This is the Developer branch and as a result an entire PROS Project is included 
 5. Place `selector::init();` in `void initazlize(){}` in your main.cpp file.
 6. Make if statements in your void `void autonomous() {}` like so:
 
-  `if(selector::get() == 1){ //run auton for Front Red }`
+  `if(selector::auton == 1){ //run auton for Front Red }`
 
 7. Create multiple if statements for all possible numbers of selector::auton.
 8. All default cases are listed below:
 
-* selector::get() == 1 : Red Front
-* selector::get() == 2 : Red Back
-* selector::get() == 3 : Do Nothing
-* selector::get() == -1 : Blue Front
-* selector::get() == -2 : Blue Back
-* selector::get() == -3 : Do Nothing
-* selector::get() == 0 : Skills
+* selector::auton == 1 : Red Front
+* selector::auton == 2 : Red Back
+* selector::auton == 3 : Do Nothing
+* selector::auton == -1 : Blue Front
+* selector::auton == -2 : Blue Back
+* selector::auton == -3 : Do Nothing
+* selector::auton == 0 : Skills
 
 ## How to customize the selector
 All configuration is done from the `autoSelect/selection.h` file.

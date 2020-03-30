@@ -6,7 +6,7 @@ void disabled() {}
 void competition_initialize() {}
 
 void autonomous() {
-  printf("Selected Auton: %d\n", selector::get());
+  printf("Selected Auton: %d\n", selector::auton);
   pros::delay(500);
 }
 

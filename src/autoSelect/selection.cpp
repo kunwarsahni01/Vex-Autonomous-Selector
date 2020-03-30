@@ -3,35 +3,12 @@
 
 namespace selector{
 
-Selector selector;
+int auton;
+int autonCount;
+int hue;
+const char *btnmMap[] = {"","","","","","","","","","",""}; // up to 10 autons
 
-int Selector::auton = DEFAULT;
-int Selector::autonCount = 0;
-int Selector::hue = HUE;
-const char *Selector::btnmMap[] = {"","","","","","","","","","",}; // up to 10 autons
-
-void init(int hue, int default_auton, const char **autons){
-	selector = Selector();
-	Selector::hue = hue;
-	int i = 0;
-	do{
-		//printf("%s\n", autons[i]);
-		memcpy(&Selector::btnmMap[i], &autons[i], sizeof(&autons));
-		i++;
-	}while(strcmp(autons[i], "") != 0);
-
-	Selector::autonCount = i;
-	Selector::auton = default_auton;
-	//printf("Default auton %d\n", default_auton);
-	//printf("Auton Count %d\n", Selector::autonCount);
-	selector.init();
-}
-
-int get(){
-	return Selector::auton;
-}
-
-lv_res_t Selector::redBtnmAction(lv_obj_t *btnm, const char *txt){
+lv_res_t redBtnmAction(lv_obj_t *btnm, const char *txt){
 	//printf("red button: %s released\n", txt);
 
 	for(int i = 0; i < autonCount; i++){
@@ -43,7 +20,7 @@ lv_res_t Selector::redBtnmAction(lv_obj_t *btnm, const char *txt){
 	return LV_RES_OK; // return OK because the button matrix is not deleted
 }
 
-lv_res_t Selector::blueBtnmAction(lv_obj_t *btnm, const char *txt)
+lv_res_t blueBtnmAction(lv_obj_t *btnm, const char *txt)
 {
 	//printf("blue button: %s released\n", txt);
 
@@ -56,14 +33,24 @@ lv_res_t Selector::blueBtnmAction(lv_obj_t *btnm, const char *txt)
 	return LV_RES_OK; // return OK because the button matrix is not deleted
 }
 
-lv_res_t Selector::skillsBtnAction(lv_obj_t *btn)
+lv_res_t skillsBtnAction(lv_obj_t *btn)
 {
   //printf("skills pressed");
 	auton = 0;
 	return LV_RES_OK;
 }
 
-void Selector::init(){
+void init(int hue, int default_auton, const char **autons){
+
+	int i = 0;
+	do{
+		memcpy(&btnmMap[i], &autons[i], sizeof(&autons));
+		i++;
+	}while(strcmp(autons[i], "") != 0);
+
+	selector::autonCount = i;
+	selector::hue = hue;
+	selector::auton = default_auton;
 
 	// lvgl theme
 	lv_theme_t *th = lv_theme_alien_init(hue, NULL); //Set a HUE value and keep font default RED
