@@ -1,5 +1,9 @@
 # Vex Autonomous Selector for PROS
-![Screenshot_of_Selector](https://user-images.githubusercontent.com/22580992/67626102-d9e1d080-f814-11e9-84cd-63a44e6a35af.png)
+![Screenshot_of_Selector](./red.png)
+
+New pneumatics menu (Added by Adam Salem from 12350X)
+
+![Pneumatics menu](./pneumatics.png)
 
 This is the Developer branch and as a result an entire PROS Project is included for development
 
