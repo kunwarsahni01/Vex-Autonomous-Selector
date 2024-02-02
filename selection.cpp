@@ -169,18 +169,15 @@ namespace selector
 		pros::Task tabWatcher_task(tabWatcher);
 	}
 	lv_res_t switchhandle1(lv_obj_t *s){
-		ADIDigitalOut p ('A');
-		p.set_value(lv_sw_get_state(s));
+		pros::c::adi_digital_write('A', lv_sw_get_state(s));
 		return LV_RES_OK;
 	}
-		lv_res_t switchhandle2(lv_obj_t *s){
-		ADIDigitalOut p ('B');
-		p.set_value(lv_sw_get_state(s));
+	lv_res_t switchhandle2(lv_obj_t *s){
+		pros::c::adi_digital_write('B', lv_sw_get_state(s));
 		return LV_RES_OK;
 	}
-		lv_res_t switchhandle3(lv_obj_t *s){
-		ADIDigitalOut p ('C');
-		p.set_value(lv_sw_get_state(s));
+	lv_res_t switchhandle3(lv_obj_t *s){
+		pros::c::adi_digital_write('B', lv_sw_get_state(s));
 		return LV_RES_OK;
 	}
 } // namespace selector
