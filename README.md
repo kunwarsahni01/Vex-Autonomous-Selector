@@ -1,21 +1,19 @@
 # Vex Autonomous Selector for PROS
-![Screenshot_of_Selector](https://user-images.githubusercontent.com/22580992/67626102-d9e1d080-f814-11e9-84cd-63a44e6a35af.png)
+![Screenshot_of_Selector](./red.png)
+
+New pneumatics menu (Added by Adam Salem from 12350X)
+
+![Pneumatics menu](./pneumatics.png)
 
 This is the Developer branch and as a result an entire PROS Project is included for development
 
 ## How to use:
-1. Download the zip file release from here: [Releases](https://github.com/kunwarsahni01/Vex-Autonomous-Selector/releases)
-2. Run this command from terminal: `prosv5 c fetch autoSelect@2.1.4.zip`
-3. Then `cd` into your pros project directory in your terminal.
-4. And Run this command from terminal: `prosv5 c apply autoSelect`
-4. Put this: `#include "autoSelect/selection.h"` at the top of your main.cpp file in your PROS Project.
-5. Place `selector::init();` in `void initazlize(){}` in your main.cpp file.
-6. Make if statements in your void `void autonomous() {}` like so:
+
 
   `if(selector::auton == 1){ //run auton for Front Red }`
 
-7. Create multiple if statements for all possible numbers of selector::auton.
-8. All default cases are listed below:
+1. Create multiple if statements for all possible numbers of selector::auton.
+2. All default cases are listed below:
 
 * selector::auton == 1 : Red Front
 * selector::auton == 2 : Red Back
